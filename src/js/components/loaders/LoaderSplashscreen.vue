@@ -8,7 +8,6 @@
         <vue-typer
           :repeat="0"
           :pre-type-delay="1800"
-          @completed="typed"
           text="Salte para uma nova vida."
         ></vue-typer>
       </h1>
