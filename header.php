@@ -25,5 +25,5 @@
   <?php wp_head(); ?>
 </head>
 <body>
-<div id="app">
-  <kw-splashscreen></kw-splashscreen>
+<div data-id="app">
+  <loader-splashscreen></loader-splashscreen>
