@@ -1,10 +1,65 @@
 .loader-splashscreen {
   background-color: $black;
   color: $white;
+  transition: 1s all ease-in-out;
+
+  &.is-loaded {
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include rem(padding, 24px 24px);
+    @include rem(width, 274px);
+
+    .icon-logo {
+      margin: 0;
+      @include rem(margin-right, 8px);
+    }
+
+    @media (min-width: $tablet) {
+      @include rem(padding, 32px);
+      @include rem(width, 380px);
+
+      .icon-logo {
+        @include rem(font-size, 64px);
+      }
+
+      .loader-splashscreen__title {
+        @include rem(margin-top, 14px);
+        @include rem(margin-bottom, 0);
+        @include rem(font-size, 18px);
+        @include rem(line-height, 22px);
+      }
+    }
+
+    @media (min-width: $desktop) {
+      @include rem(padding, 32px 40px);
+      @include rem(width, 400px);
+
+      .icon-logo {
+        @include rem(font-size, 72px);
+      }
+
+      .loader-splashscreen__title {
+        @include rem(margin-top, 18px);
+        @include rem(font-size, 20px);
+        @include rem(line-height, 24px);
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
 
   .icon-logo {
     @include rem(margin, 0 16px);
     @include rem(font-size, 64px);
+    transition: 1s all ease;
 
     @media (min-width: $tablet) {
       @include rem(margin, 0 40px);
@@ -22,6 +77,8 @@
     @include rem(line-height, 24px);
     font-family: $font-family;
     font-weight: 400;
+    transition: 1s all ease;
+    user-select: none;
 
     @media (min-width: $tablet) {
       @include rem(font-size, 24px);

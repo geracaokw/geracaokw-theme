@@ -1,31 +1,32 @@
 <template>
-  <transition name="fade">
-    <div v-if="show" class="loader--overlay loader-splashscreen">
-      <i class="icon-logo"></i>
-      <h1 class="loader-splashscreen__title">
-        <vue-typer
-          :repeat="0"
-          :erase-delay="70"
-          erase-style="backspace"
-          :text="[
-            'Ousadia.',
-            'Alegria.',
-            'Perseverança.',
-            'Obediência.',
-            'Ouse.'
-          ]"
-          @completed="slogan = true"
-        ></vue-typer>
-        <br />
-        <vue-typer
-          v-if="slogan"
-          :repeat="0"
-          :pre-type-delay="300"
-          text="Salte para uma nova vida."
-        ></vue-typer>
-      </h1>
-    </div>
-  </transition>
+  <div
+    :class="['loader--overlay', 'loader-splashscreen', { 'is-loaded': !show }]"
+  >
+    <i class="icon-logo"></i>
+    <h1 v-if="show" class="loader-splashscreen__title">
+      <vue-typer
+        :repeat="0"
+        :erase-delay="70"
+        erase-style="backspace"
+        :text="['Ouse.']"
+        @completed="slogan = true"
+      ></vue-typer>
+      <br />
+      <vue-typer
+        v-if="slogan"
+        :repeat="0"
+        :pre-type-delay="300"
+        text="Salte para uma nova vida."
+        @completed="typed"
+      ></vue-typer>
+    </h1>
+
+    <h1 v-if="!show" class="loader-splashscreen__title">
+      Geração
+      <br />
+      Karol Wojtyla
+    </h1>
+  </div>
 </template>
 
 <script>
@@ -53,7 +54,7 @@ export default {
     },
     typed() {
       setTimeout(() => {
-        localStorage.setItem("viewIntro", true);
+        // localStorage.setItem("viewIntro", true);
         this.show = false;
       }, 500);
     }
