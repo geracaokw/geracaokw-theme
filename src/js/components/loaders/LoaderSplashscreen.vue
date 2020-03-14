@@ -3,11 +3,24 @@
     <div v-if="show" class="loader--overlay loader-splashscreen">
       <i class="icon-logo"></i>
       <h1 class="loader-splashscreen__title">
-        <vue-typer :repeat="0" :pre-type-delay="1500" text="Ouse."></vue-typer
-        ><br />
         <vue-typer
           :repeat="0"
-          :pre-type-delay="1800"
+          :erase-delay="70"
+          erase-style="backspace"
+          :text="[
+            'Ousadia.',
+            'Alegria.',
+            'Perseverança.',
+            'Obediência.',
+            'Ouse.'
+          ]"
+          @completed="slogan = true"
+        ></vue-typer>
+        <br />
+        <vue-typer
+          v-if="slogan"
+          :repeat="0"
+          :pre-type-delay="300"
           text="Salte para uma nova vida."
         ></vue-typer>
       </h1>
@@ -55,3 +68,5 @@ export default {
   }
 };
 </script>
+
+<style></style>
