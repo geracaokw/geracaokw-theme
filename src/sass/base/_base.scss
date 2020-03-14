@@ -18,9 +18,10 @@ html {
 body {
   height: 100%;
   font-family: $font-family;
+  font-weight: 400;
   @include rem(font-size, $font-size);
   line-height: normal;
-  color: $color-stable-darker;
+  color: $black;
 }
 
 #app {

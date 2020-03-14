@@ -1,3 +1,42 @@
 .loader-splashscreen {
-  background-color: $color-stable-darker;
+  background-color: $black;
+  color: $white;
+
+  .icon-logo {
+    @include rem(margin, 0 16px);
+    @include rem(font-size, 64px);
+
+    @media (min-width: $tablet) {
+      @include rem(margin, 0 40px);
+      @include rem(font-size, 120px);
+    }
+
+    @media (min-width: $desktop) {
+      @include rem(margin, 0 56px);
+      @include rem(font-size, 160px);
+    }
+  }
+
+  &__title {
+    @include rem(font-size, 16px);
+    @include rem(line-height, 24px);
+    font-family: $font-family;
+    font-weight: 400;
+
+    @media (min-width: $tablet) {
+      @include rem(font-size, 24px);
+      @include rem(line-height, 32px);
+    }
+
+    @media (min-width: $desktop) {
+      @include rem(font-size, 32px);
+      @include rem(line-height, 40px);
+    }
+
+    .vue-typer,
+    .custom.char {
+      color: $white !important;
+    }
+  }
+
 }
