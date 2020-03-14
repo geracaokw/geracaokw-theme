@@ -1,0 +1,136 @@
+.dd-l-header
+  position: relative
+  z-index: 1
+  background-color: $color-gray-hhhh
+
+  .dd-c-grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: ((90/$size) + rem)
+
+  &.is-float
+    position: fixed
+
+    + .dd-l-main
+      margin-top: ((90/$size) + rem)
+
+    .dd-l-header-logo
+      margin: 0
+      display: block
+      width: inherit
+      height: inherit
+      background-color: transparent
+      border-radius: 0
+      box-shadow: none
+
+  &-logo
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: ((60/$size) + rem)
+    width: ((200/$size) + rem)
+    height: ((150/$size) + rem)
+    background-color: $color-light
+    border-radius: 0 0 ((6/$size) + rem) ((6/$size) + rem)
+    box-shadow: 
+
+    &__link
+      display: block
+
+    &__img
+      width: ((154/$size) + rem)
+
+  &-menu
+    display: flex
+    align-items: center
+
+    &-list
+      margin: 0
+      margin-right: ((40/$size) + rem)
+      padding: 0
+      list-style: none
+
+    .menu-item
+      display: inline-block
+
+      &:hover
+        .sub-menu
+          display: block
+
+        a
+          color: $color-h
+
+      &:not(:last-child)
+        margin-right: ((30/$size) + rem)
+
+      &-has-children
+        &:after
+          content: ''
+          display: inline-block
+          margin-left: ((5/$size) + rem)
+          width: ((10.8/$size) + rem)
+          height: ((5.9/$size) + rem)
+          vertical-align: middle
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 6' xmlns='http://www.w3.org/2000/svg' xmlns:serif='http://www.serif.com/' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M5.39 5.92a.79.79 0 0 1-.55-.218L.23 1.254a.73.73 0 0 1 0-1.055.79.79 0 0 1 1.09 0l4.07 3.922L9.48.197a.79.79 0 0 1 1.09.004c.3.292.3.764 0 1.055L5.93 5.704a.782.782 0 0 1-.54.216z' fill='%23f75b03' fill-rule='nonzero' serif:id='Forma 7'/%3E%3C/svg%3E")
+
+        &:hover:after
+          content: ''
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 6' xmlns='http://www.w3.org/2000/svg' xmlns:serif='http://www.serif.com/' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='1.414'%3E%3Cpath d='M5.39 5.92a.79.79 0 0 1-.55-.218L.23 1.254a.73.73 0 0 1 0-1.055.79.79 0 0 1 1.09 0l4.07 3.922L9.48.197a.79.79 0 0 1 1.09.004c.3.292.3.764 0 1.055L5.93 5.704a.782.782 0 0 1-.54.216z' fill='%23ff7626' fill-rule='nonzero' serif:id='Forma 7'/%3E%3C/svg%3E")
+
+      a
+        color: $color-gray
+        font-weight: $font-medium
+        text-decoration: none
+        transition: $transition
+
+    .sub-menu
+      position: absolute
+      display: none
+      border-top: ((36/16) + rem) solid $color-gray-hhhh
+      padding: ((25/$size) + rem)
+      background-color: $color
+      border-radius: 0 0 ((6/$size) + rem) ((6/$size) + rem)
+
+      .menu-item
+        display: block
+
+        &:not(:last-child)
+          margin-bottom: ((30/$size) + rem)
+
+        a
+          color: $color-light
+
+          &:hover
+            color: $color-gray
+
+    &-social
+      display: flex
+
+      &__item
+        text-decoration: none
+        font:
+          size: ((15/$size) + rem)
+          weight: $font-bold
+        color: $color-gray
+        transition: $transition
+
+        &:hover
+          color: $color
+
+        .icon
+          width: ((25/$size) + rem)
+          height: ((25/$size) + rem)
+          vertical-align: middle
+
+        span
+          margin-left: ((10/$size) + rem)
+
+        &:not(:last-child)
+          margin-right: ((30/$size) + rem)
+
+        &--whatsapp
+          transition: $transition
+
+          &:hover
+            transform: scale(1.2)

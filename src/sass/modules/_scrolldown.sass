@@ -1,0 +1,25 @@
+@keyframes scrollbutton
+  0%
+    transform: translateY(0)
+    opacity: 1
+
+  100%
+    transform: translateY(((10/$size) + rem))
+    opacity: 0
+
+.dd-m-scrolldown
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: ((50/$size) + rem) auto ((100/$size) + rem)
+
+  &__button
+    display: block
+    width: ((20/$size) + rem)
+    height: ((24/$size) + rem)
+    animation: scrollbutton infinite 1.5s
+
+  .icon
+    width: 100%
+    height: 100%
+    pointer-events: none

@@ -1,0 +1,43 @@
+.dd-m-healthtips
+  position: relative
+  background-color: $color-gray-hhh
+
+  @media (min-width: ((1190/$size) + rem))
+    &:before
+      content: ""
+      position: absolute
+      top: -45%
+      z-index: -1
+      display: block
+      width: ((1750/$size) + rem)
+      height: ((378/$size) + rem)
+      margin-right: auto
+      background:
+        image: url('/wp-content/themes/santa-casa-maua-saude-theme/public/img/svg/healthtips-details.svg')
+        repeat: no-repeat
+        size: 100%
+
+  .dd-c-grid
+    position: relative
+    display: flex
+    flex-direction: column
+    height: ((500/$size) + rem)
+
+    @media (min-width: ((1190/$size) + rem))
+      align-items: center
+      justify-content: flex-end
+      flex-direction: row
+
+  &-header
+    &__title
+      @extend .section-title
+
+    &__text
+      @extend .section-description
+
+  &-content
+    max-width: ((530/$size) + rem)
+
+  &-posts
+    @media (min-width: ((1190/$size) + rem))
+      position: absolute

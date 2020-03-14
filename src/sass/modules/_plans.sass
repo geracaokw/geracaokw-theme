@@ -1,0 +1,116 @@
+.dd-m-plans
+  display: flex
+  justify-content: space-between
+  margin-top: ((37/$size) + rem)
+
+  @media (min-width: ((1190/$size) + rem))
+    margin:
+      top: 0
+      bottom: -((160/$size) + rem)
+    transform: translateY(-50%)
+
+  &-header
+    position: relative
+    display: none
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    margin-right: ((30/$size) + rem)
+    border-radius: ((5/$size) + rem)
+    background-color: $color-gray-hhh
+    overflow: unset !important
+
+    @media (min-width: ((1190/$size) + rem))
+      display: flex
+
+    .icon
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      display: block
+      width: ((89/$size) + rem)
+      height: ((100/$size) + rem)
+      margin: 0 auto
+      transform: translateY(-50%)
+
+    &__title
+      margin: 0 ((52/$size) + rem)
+      font:
+        size: ((40/$size) + rem)
+        weight: $font-medium
+      line-height: ((46/$size) + rem)
+      color: $color-gray-h
+
+  &-item
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: ((320/$size) + rem)
+    border-radius: ((5/$size) + rem)
+    overflow: hidden
+    text-decoration: none
+    transition: $transition
+    
+    &:not(:last-child)
+      margin-right: ((30/$size) + rem)
+
+    &:hover
+      box-shadow: ((14/$size) + rem) ((14/$size) + rem) ((25/$size) + rem) rgba($color-gray, .2)
+
+      .dd-m-plans-item__button
+        transform: translateX(((5/$size) + rem))
+
+    &__title
+      margin: 0 0 ((10/$size) + rem)
+      text-transform: uppercase
+      font:
+        size: ((24/$size) + rem)
+        weight: $font-bold
+
+    &__subtitle
+      margin: 0
+      font:
+        size: ((16/$size) + rem)
+        weight: $font-regular
+
+    &__button
+      appearance: none
+      display: block
+      margin-left: auto
+      padding: 0
+      background-color: transparent
+      border: 0
+      transition: $transition
+      width: ((17/$size) + rem)
+      height: ((11.9/$size) + rem)
+      outline: 0
+      cursor: pointer
+
+      .icon
+        width: 100%
+        height: 100%
+
+    &--pf
+      background-color: $color
+
+    &--pj
+      background-color: $color-red
+
+    &--company
+      background-color: $color-dark
+
+  &-figure
+    flex: 1
+    margin: 0
+    mix-blend-mode: multiply
+    opacity: .8
+
+  &-content
+    margin-bottom: ((20/16) + rem)
+    padding: 0 ((28/$size) + rem)
+    color: $color-light
+
+    hgroup
+      margin-bottom: ((13/$size) + rem)
