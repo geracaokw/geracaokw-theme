@@ -16,7 +16,7 @@ function custom_css() {
     $main = '/public/css/main.css';
     wp_register_style('main-css', get_template_directory_uri() . $main, array(), '1.0.0');
     wp_enqueue_style('main-css');
-    if ($template_name == 'template-home.php') {
+    if ($template_name == 'views/template-home.php') {
         $value = '/public/css/home.css';
     } else {
         $value = '/public/css/page.css';

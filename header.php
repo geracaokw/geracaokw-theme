@@ -27,6 +27,8 @@
 
   <?php wp_head(); ?>
 </head>
-<body>
-<div data-id="app">
+<body <?php body_class(); ?>>
+<div data-id="app" id="app">
   <loader-splashscreen></loader-splashscreen>
+
+  <header class="header" role="banner"></header>

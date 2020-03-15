@@ -516,6 +516,7 @@ html {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
+  min-height: 100vh;
   height: 100%;
   font-family: "titling-gothic-fb", sans-serif;
   font-weight: 400;
@@ -533,6 +534,7 @@ body {
   color: #000; }
 
 #app {
+  min-height: 100vh;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -544,14 +546,14 @@ body {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-.wrap {
+.main {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1; }
 
 .loader-splashscreen {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
