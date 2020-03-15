@@ -1,1 +1,7 @@
-.list-carousel {}
+.list-carousel {
+  width: 100%;
+
+  .slick-track {
+    width: 100% !important;
+  }
+}

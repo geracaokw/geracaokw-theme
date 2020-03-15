@@ -1,1 +1,35 @@
-.card-carousel {}
+.card-carousel {
+  display: flex !important;
+  flex-direction: column;
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__figure {
+    margin: 0;
+    width: 100%;
+    @include rem(height, 240px);
+
+    @media (min-width: $desktop) {
+      width: calc(100% - 560px);
+      @include rem(max-width, 880px);
+      @include rem(height, 480px);
+      @include rem(margin-right, 24px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    @media (min-width: $desktop) {
+      @include rem(width, 480px);
+    }
+  }
+}

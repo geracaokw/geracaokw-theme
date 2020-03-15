@@ -12,7 +12,10 @@ export default {
       options: {
         infinite: false,
         arrows: true,
-        dots: false
+        dots: false,
+        fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
       }
     };
   },

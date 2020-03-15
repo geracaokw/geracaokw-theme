@@ -9,3 +9,14 @@
   display: flex;
   align-items: center;
 }
+
+.list-carousel {
+  @media (min-width: $tablet) {
+    @include rem(margin-left, 200px);
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1440px;
+    @include rem(margin-left, 320px);
+  }
+}
