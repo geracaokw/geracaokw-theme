@@ -55,10 +55,11 @@ export default {
       return $body.classList.remove("overflow-hidden");
     },
     typed() {
-      setTimeout(() => {
-        // localStorage.setItem("viewIntro", true);
-        this.show = false;
-      }, 500);
+      this.show = false;
+
+      this.$el.addEventListener("transitionend", () => {
+        localStorage.setItem("viewIntro", true);
+      });
     }
   },
   watch: {
