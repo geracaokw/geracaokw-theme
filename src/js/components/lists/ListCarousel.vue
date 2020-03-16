@@ -15,7 +15,11 @@ export default {
         dots: false,
         fade: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        nextArrow:
+          "<button type='button' class='slick-next'><i class='icon-arrow-right'></i></button>",
+        prevArrow:
+          "<button type='button' class='slick-prev'><i class='icon-arrow-left'></i></button>"
       }
     };
   },
