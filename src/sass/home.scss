@@ -22,6 +22,7 @@
   @media (min-width: $desktop) {
     max-width: calc(100% - 250px);
     @include rem(margin-left, 200px);
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-hd) {
