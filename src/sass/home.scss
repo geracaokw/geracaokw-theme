@@ -7,16 +7,25 @@
 
 .main {
   display: flex;
-  align-items: center;
+
+  @media (min-width: $desktop) {
+    align-items: center;
+  }
 }
 
 .list-carousel {
-  @media (min-width: $tablet) {
+  width: calc(100% - 64px);
+  margin-left: auto;
+  margin-right: auto;
+  @include rem(margin-top, 104px);
+
+  @media (min-width: $desktop) {
+    max-width: calc(100% - 250px);
     @include rem(margin-left, 200px);
   }
 
-  @media (min-width: $desktop) {
-    max-width: 1440px;
+  @media (min-width: $desktop-hd) {
+    max-width: calc(100% - 350px);
     @include rem(margin-left, 320px);
   }
 }

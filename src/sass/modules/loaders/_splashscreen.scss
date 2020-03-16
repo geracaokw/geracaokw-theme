@@ -23,7 +23,7 @@
       transform: translate(24px, 24px);
       @include rem(width, 180px);
 
-      @media (min-width: $tablet) {
+      @media (min-width: $desktop) {
         width: 100%;
         transform: translate(-24px, 32px);
       }
@@ -39,7 +39,7 @@
       @include rem(margin-right, 8px);
     }
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       @include rem(width, 280px);
       height: 100%;
 
@@ -83,7 +83,7 @@
     @include rem(font-size, 64px);
     transition: .8s all ease;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       @include rem(margin, 0 40px);
       @include rem(font-size, 120px);
     }
@@ -103,7 +103,7 @@
     transition: .8s all ease;
     user-select: none;
 
-    @media (min-width: $tablet) {
+    @media (min-width: $desktop) {
       @include rem(margin-bottom, 8px);
       @include rem(font-size, 24px);
     }
