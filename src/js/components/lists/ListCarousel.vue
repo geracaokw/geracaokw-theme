@@ -17,9 +17,9 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow:
-          "<button type='button' class='slick-next'><i class='icon-arrow-right'></i></button>",
+          "<button type='button' class='button slick-next'><i class='uil uil-angle-down'></i></button>",
         prevArrow:
-          "<button type='button' class='slick-prev'><i class='icon-arrow-left'></i></button>"
+          "<button type='button' class='button slick-prev'><i class='uil uil-angle-up'></i></button>"
       }
     };
   },
@@ -29,4 +29,51 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="sass">
+@import '../../../sass/base/imports'
+
+.slick-arrow
+  position: absolute
+  z-index: 1
+  @include rem(width, 32px)
+  @include rem(height, 32px)
+  @include rem(font-size, 24px)
+  border-radius: 50%
+  background-color: $color-balanced-medium
+  color: $color-stable-white
+
+  @media (min-width: $desktop)
+    @include rem(width, 48px)
+    @include rem(height, 48px)
+    @include rem(font-size, 32px)
+
+  &.slick-disabled
+    background-color: $color-balanced-light
+    color: $color-balanced-normal
+
+  &.slick-prev
+    top: 0
+    left: 0
+    transform: translate(-16px, 68px) rotate(-90deg)
+
+    @media (min-width: $desktop)
+      left: 0
+      transform: translate(176px, -16px)
+
+    @media (min-width: $desktop-hd)
+      transform: translate(56px, -16px)
+
+  &.slick-next
+    top: 0
+    right: 0
+    transform: translate(16px, 68px) rotate(-90deg)
+
+    @media (min-width: $desktop)
+      top: inherit
+      bottom: 0
+      left: 0
+      transform: translate(176px, 16px)
+
+    @media (min-width: $desktop-hd)
+      transform: translate(56px, 16px)
+</style>

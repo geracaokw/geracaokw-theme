@@ -13,6 +13,7 @@
 
   <!-- Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/fyd2qsq.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css">
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . '/public/img/favicon/apple-touch-icon.png'; ?>">

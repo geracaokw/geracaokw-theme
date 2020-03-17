@@ -57,6 +57,23 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.sass$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              indentedSyntax: true,
+              // sass-loader version >= 8
+              sassOptions: {
+                indentedSyntax: true
+              }
+            }
+          }
+        ]
+      },
+      {
         test: /\.css$/,
         use: [{
           loader: 'style-loader'

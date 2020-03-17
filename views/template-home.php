@@ -10,7 +10,7 @@ get_header();
   <list-carousel>
     <card-carousel :item="{
       image: {
-        url: '/wp-content/uploads/2020/03/image-default.png',
+        url: '/wp-content/themes/geracaokw-theme/public/img/default/banner-1.png',
         alt: 'Jovens da Geração Karol Wojtyla reunidos para a foto final do Retiro Ousadia 2020.'
       },
       title: 'Conheça a nossa história',
@@ -19,7 +19,7 @@ get_header();
     }"></card-carousel>
     <card-carousel :item="{
       image: {
-        url: '/wp-content/uploads/2020/03/image-default2.png',
+        url: '/wp-content/themes/geracaokw-theme/public/img/default/banner-2.png',
         alt: 'Foto do papa São João Paulo II olhando para cima'
       },
       title: 'Afinal, quem é Karol Wojtyla?',

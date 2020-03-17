@@ -34,5 +34,16 @@
     "vue-slick": "^1.1.15",
     "vue-template-compiler": "^2.6.10",
     "vue-typer": "^1.2.0"
+  },
+  "browserslist": {
+    "production": [
+      "last 40 versions"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version",
+      "last 1 ie version"
+    ]
   }
 }
