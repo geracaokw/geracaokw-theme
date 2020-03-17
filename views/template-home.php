@@ -15,7 +15,10 @@ get_header();
       },
       title: 'Conheça a nossa história',
       excerpt: '<p>Do sopro divino à busca pelo altíssimo.</p>',
-      link: '#'
+      button: {
+        link: '#',
+        label: 'Eu quero conhecer'
+      }
     }"></card-carousel>
     <card-carousel :item="{
       image: {
@@ -24,7 +27,10 @@ get_header();
       },
       title: 'Afinal, quem é Karol Wojtyla?',
       excerpt: '<p>Quem é a pessoa que dá nome à esta geração?</p>',
-      link: '#'
+      button: {
+        link: '#',
+        label: 'Eu quero saber'
+      }
     }"></card-carousel>
   </list-carousel>
 </main>

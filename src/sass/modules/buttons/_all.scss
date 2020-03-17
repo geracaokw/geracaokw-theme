@@ -1,3 +1,158 @@
 .button {
   @extend .reset-button;
+  display: inline-flex;
+  transition: $transition-buttons;
+  align-items: center;
+  justify-content: center;
+
+  // Design
+  &-square {
+    @include rem(border-radius, 4px);
+  }
+
+  &-rounded {
+    border-radius: 50%;
+  }
+
+  // Mode
+  &--filled {}
+
+  &--outlined {
+    border: 2px solid;
+  }
+
+  &--text {}
+
+  // Direction
+  &-ltr {
+    flex-direction: row;
+
+    i {
+      @include rem(margin-right, 8px);
+    }
+  }
+
+  &-rtl {
+    flex-direction: row-reverse;
+
+    i {
+      @include rem(margin-left, 8px);
+    }
+  }
+
+  // Size
+  &--xsm {
+    @include rem(padding, 12px 24px);
+    @include rem(font-size, 12px);
+    @include rem(line-height, 12px);
+  }
+
+  &--sm {
+    @include rem(padding, 14px 28px);
+    @include rem(font-size, 14px);
+    @include rem(line-height, 14px);
+  }
+
+  &--md {
+    @include rem(padding, 16px 32px);
+    @include rem(font-size, 16px);
+    @include rem(line-height, 16px);
+  }
+
+  &--lg {
+    @include rem(padding, 20px 36px);
+    @include rem(font-size, 20px);
+    @include rem(line-height, 20px);
+  }
+
+  &--xlg {
+    @include rem(padding, 24px 48px);
+    @include rem(font-size, 24px);
+    @include rem(line-height, 24px);
+  }
+
+  // Colors
+  &--stable {
+    &.button--filled {}
+
+    &.button--outlined {}
+
+    &.button--text {}
+  }
+
+  &--balanced {
+    &.button--filled {
+      color: $white;
+      background-color: $color-balanced-medium;
+
+      &:hover {
+        background-color: $color-balanced-normal;
+      }
+
+      &:active {
+        background-color: $color-balanced-darker;
+      }
+
+      &:focus {
+        background-color: $color-balanced-darker;
+        box-shadow: 0 0 0 2px rgba($color-balanced-darker, .2);
+      }
+
+      &[disabled],
+      &.slick-disabled {
+        background-color: $color-balanced-light;
+        color: $color-balanced-normal;
+      }
+    }
+
+    &.button--outlined {
+      border-color: $color-balanced-medium;
+      color: $color-balanced-medium;
+
+      &:hover {
+        border-color: $color-balanced-normal;
+        color: $color-balanced-normal;
+      }
+
+      &:active {
+        border-color: $color-balanced-darker;
+        color: $color-balanced-darker;
+      }
+
+      &:focus {
+        border-color: $color-balanced-darker;
+        color: $color-balanced-darker;
+        box-shadow: 0 0 0 2px rgba($color-balanced-darker, .2);
+      }
+
+      &[disabled],
+      &.slick-disabled {
+        border-color: $color-balanced-light;
+        color: $color-balanced-light;
+      }
+    }
+
+    &.button--text {
+      color: $color-balanced-medium;
+
+      &:hover {
+        background-color: rgba($color-balanced-medium, .2);
+        color: $color-balanced-normal;
+      }
+
+      &:active {
+        color: $color-balanced-darker;
+      }
+
+      &:focus {
+        color: $color-balanced-darker;
+        background-color: rgba($color-balanced-medium, .2);
+      }
+
+      &[disabled],
+      &.slick-disabled {
+        color: $color-balanced-light;
+      }
+    }
+  }
 }

@@ -89,6 +89,7 @@
   }
 
   &__excerpt {
+    @include rem(margin-bottom, 16px);
     @include rem(font-size, 16px);
     @include rem(line-height, 24px);
     font-weight: 200;
@@ -96,11 +97,13 @@
     transition: $transition-cards;
 
     @media (min-width: $tablet) {
-      @include rem(font-size, 18px);
+      @include rem(margin-bottom, 20px);
+      @include rem(font-size, 20px);
       @include rem(line-height, 22px);
     }
 
     @media (min-width: $desktop-hd) {
+      @include rem(margin-bottom, 24px);
       @include rem(font-size, 24px);
       @include rem(line-height, 32px);
     }

@@ -17,9 +17,9 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         nextArrow:
-          "<button type='button' class='button slick-next'><i class='uil uil-angle-down'></i></button>",
+          "<button type='button' class='button button-rounded button--filled button--balanced slick-next'><i class='uil uil-angle-down'></i></button>",
         prevArrow:
-          "<button type='button' class='button slick-prev'><i class='uil uil-angle-up'></i></button>"
+          "<button type='button' class='button button-rounded button--filled button--balanced slick-prev'><i class='uil uil-angle-up'></i></button>"
       }
     };
   },
@@ -38,18 +38,11 @@ export default {
   @include rem(width, 32px)
   @include rem(height, 32px)
   @include rem(font-size, 24px)
-  border-radius: 50%
-  background-color: $color-balanced-medium
-  color: $color-stable-white
 
   @media (min-width: $desktop)
     @include rem(width, 48px)
     @include rem(height, 48px)
     @include rem(font-size, 32px)
-
-  &.slick-disabled
-    background-color: $color-balanced-light
-    color: $color-balanced-normal
 
   &.slick-prev
     top: 0
