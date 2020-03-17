@@ -5,6 +5,7 @@
 
 get_header();
 ?>
+<loader-splashscreen role="banner"></loader-splashscreen>
 
 <main class="main" role="main">
   <list-carousel>
@@ -35,5 +36,3 @@ get_header();
   </list-carousel>
 </main>
 
-
-<?php get_footer(); ?>

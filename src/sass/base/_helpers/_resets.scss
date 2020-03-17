@@ -15,6 +15,11 @@
   &:not(:disabled):not(.disabled) {
     cursor: pointer;
   }
+
+  .disabled,
+  [disabled] {
+    pointer-events: none;
+  }
 }
 
 .reset-input {

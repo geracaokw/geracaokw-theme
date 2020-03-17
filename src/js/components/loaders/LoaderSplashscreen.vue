@@ -1,7 +1,5 @@
 <template>
-  <div
-    :class="['loader--overlay', 'loader-splashscreen', { 'is-loaded': !show }]"
-  >
+  <header :class="['loader--overlay', 'loader-splashscreen', { 'is-loaded': !show }]">
     <div class="loader-splashscreen__logo">
       <i class="icon-logo"></i>
       <h1 v-if="show" class="loader-splashscreen__title">
@@ -24,20 +22,19 @@
 
       <h1 v-if="!show" class="loader-splashscreen__title">
         Geração
-        <br />
-        Karol Wojtyla
+        <br />Karol Wojtyla
       </h1>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
-import { VueTyper } from "vue-typer";
+import { VueTyper } from 'vue-typer';
 
 export default {
   data() {
     return {
-      show: localStorage.getItem("viewIntro") ? false : true,
+      show: localStorage.getItem('viewIntro') ? false : true,
       slogan: false
     };
   },
@@ -46,19 +43,19 @@ export default {
   },
   methods: {
     lockOverlow() {
-      const $body = document.querySelector("body");
+      const $body = document.querySelector('body');
 
       if (this.show) {
-        return $body.classList.add("overflow-hidden");
+        return $body.classList.add('overflow-hidden');
       }
 
-      return $body.classList.remove("overflow-hidden");
+      return $body.classList.remove('overflow-hidden');
     },
     typed() {
       this.show = false;
 
-      this.$el.addEventListener("transitionend", () => {
-        localStorage.setItem("viewIntro", true);
+      this.$el.addEventListener('transitionend', () => {
+        localStorage.setItem('viewIntro', true);
       });
     }
   },

@@ -1,0 +1,5 @@
+.sidebar {
+  @include rem(width, 96px);
+  @include rem(padding, 32px 24px);
+  border-left: 1px solid $color-stable-lighter;
+}

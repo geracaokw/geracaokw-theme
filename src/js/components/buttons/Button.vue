@@ -9,10 +9,12 @@
       `button--${size ? mode : 'md'}`
     ]"
     v-if="link"
-    href=""
+    href
   >
     <i v-if="icon" :class="`icon-${icon}`"></i>
-    <span><slot></slot></span>
+    <span>
+      <slot></slot>
+    </span>
   </a>
   <button
     :class="[
@@ -27,22 +29,15 @@
     v-else
   >
     <i v-if="icon" :class="`icon-${icon}`"></i>
-    <span><slot></slot></span>
+    <span>
+      <slot></slot>
+    </span>
   </button>
 </template>
 
 <script>
 export default {
-  props: [
-    "link",
-    "type",
-    "icon",
-    "design",
-    "direction",
-    "color",
-    "mode",
-    "size"
-  ]
+  props: ['link', 'type', 'icon', 'design', 'dir', 'color', 'mode', 'size']
 };
 </script>
 
