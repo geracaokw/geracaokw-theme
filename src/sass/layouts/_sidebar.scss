@@ -9,6 +9,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  -webkit-backface-visibility: hidden;
 
   &-content {
     width: 100%;
