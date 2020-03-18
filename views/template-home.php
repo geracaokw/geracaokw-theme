@@ -36,3 +36,6 @@ get_header();
   </list-carousel>
 </main>
 
+<Sidebar :content="true" :menu="true"></Sidebar>
+
+<?php get_footer(); ?>

@@ -22,13 +22,13 @@
   @include rem(margin-top, 156px);
 
   @media (min-width: $desktop) {
-    max-width: calc(100% - 250px);
+    max-width: calc(100% - 335px);
     @include rem(margin-left, 200px);
     margin-top: 0;
   }
 
   @media (min-width: $desktop-hd) {
-    max-width: calc(100% - 350px);
+    max-width: calc(100% - 454px);
     @include rem(margin-left, 320px);
   }
 }

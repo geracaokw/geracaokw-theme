@@ -1,13 +1,21 @@
 <template>
   <aside class="sidebar" role="complementary">
-    <div class="sidebar-section"></div>
-    <nav class="sidebar-section sidebar-social"></nav>
+    <Content v-if="content"></Content>
+    <Menu v-if="menu"></Menu>
   </aside>
 </template>
 
 <script>
-export default {};
-</script>
+import Content from "./sidebar/SidebarContent";
+import Menu from "./sidebar/SidebarMenu";
+import Button from "./buttons/Button";
 
-<style lang="sass">
-</style>
+export default {
+  props: ["content", "menu"],
+  components: {
+    Content,
+    Menu,
+    Button
+  }
+};
+</script>
