@@ -1,5 +1,5 @@
 .loader-splashscreen {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -10,6 +10,10 @@
   background-color: $black;
   color: $white;
   transition: .8s all ease;
+
+  @media (min-width: $desktop) {
+    position: fixed;
+  }
 
   &.is-loaded {
     z-index: 0;

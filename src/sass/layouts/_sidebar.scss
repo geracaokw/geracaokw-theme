@@ -1,5 +1,5 @@
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -12,12 +12,14 @@
 
   &-content {
     width: 100%;
+    @include rem(height, 96px);
     @include rem(padding, 32px 24px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid $color-stable-lighter;
     flex-direction: row-reverse;
+    background-color: $white;
 
     @media (min-width: $desktop) {
       @include rem(width, 96px);

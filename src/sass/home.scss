@@ -9,9 +9,11 @@
 
 .main {
   display: flex;
+  @include rem(margin-bottom, 120px);
 
   @media (min-width: $desktop) {
     align-items: center;
+    margin-bottom: 0;
   }
 }
 
