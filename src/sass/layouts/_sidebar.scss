@@ -11,6 +11,8 @@
   align-items: flex-end;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
+  user-select: none;
+  cursor: default;
 
   &-content {
     width: 100%;
@@ -162,6 +164,8 @@
       position: absolute;
       top: 0;
       right: 0;
+      display: flex;
+      flex-direction: column;
       @include rem(width, 240px);
       height: 100%;
       @include rem(padding, 24px 0);
@@ -179,8 +183,12 @@
       display: block;
       text-decoration: none;
       @include rem(font-size, 56px);
-      @include rem(padding, 0 32px);
+      @include rem(padding, 0 24px);
       color: $color-balanced-medium;
+
+      @media (min-width: $desktop) {
+        @include rem(padding, 24px 32px);
+      }
     }
 
     &__list {
@@ -188,7 +196,12 @@
       padding: 0;
       text-decoration: none;
       list-style: none;
-      @include rem(padding, 24px 32px);
+      @include rem(padding, 24px);
+
+      @media (min-width: $desktop) {
+        @include rem(width, 320px);
+        @include rem(padding, 24px 32px);
+      }
 
       &:not(:last-child) {
         border-bottom: 1px solid rgba($color-balanced-medium, .2);
@@ -229,6 +242,18 @@
         &:not(:last-child) {
           @include rem(margin-bottom, 16px);
         }
+      }
+    }
+
+    &__nav {
+      flex: 1;
+    }
+
+    .user-welcome {
+      @include rem(margin, 0 16px);
+
+      @media (min-width: $desktop) {
+        @include rem(margin, 0 24px);
       }
     }
   }

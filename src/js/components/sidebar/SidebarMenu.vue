@@ -11,28 +11,30 @@
         <i class="icon-logo"></i>
       </a>
 
-      <List
-        type="primary"
-        :list="[
-        { name: 'Início', url: '/' },
-        { name: 'Conheça', url: '/sobre' },
-        { name: 'Blog', url: '/blog' },
-        { name: 'Agenda', url: '/agenda' },
-        { name: 'Loja', url: '/loja' },
-      ]"
-      ></List>
+      <div class="sidebar-menu__nav">
+        <List
+          type="primary"
+          :list="[
+          { name: 'Início', url: '/' },
+          { name: 'Conheça', url: '/sobre' },
+          { name: 'Blog', url: '/blog' },
+          { name: 'Agenda', url: '/agenda' },
+          { name: 'Loja', url: '/loja' },
+        ]"
+        ></List>
 
-      <List type="primary" :list="[
-        { name: 'Minha conta', url: '/conta' }
-      ]"></List>
+        <List type="primary" :list="[
+          { name: 'Minha conta', url: '/conta' }
+        ]"></List>
 
-      <List
-        type="secondary"
-        :list="[
-        { name: 'Termos de uso', url: '/termos' },
-        { name: 'Privacidade', url: '/privacidade' },
-      ]"
-      ></List>
+        <List
+          type="secondary"
+          :list="[
+          { name: 'Termos de uso', url: '/termos' },
+          { name: 'Privacidade', url: '/privacidade' },
+        ]"
+        ></List>
+      </div>
 
       <user-welcome></user-welcome>
     </div>

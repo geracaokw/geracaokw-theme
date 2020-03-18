@@ -1,0 +1,51 @@
+.user-welcome {
+  @include rem(padding, 8px);
+  display: flex;
+  align-items: center;
+  @include rem(border-radius, 4px);
+  transition: .4s all ease;
+
+  @media (min-width: $desktop) {
+    @include rem(padding, 8px 16px 8px 8px);
+  }
+
+  &:hover {
+    background-color: rgba($color-balanced-black, .2);
+
+    .user-welcome__exit {
+      opacity: 1;
+    }
+  }
+
+  &__img {
+    display: block;
+    @include rem(width, 56px);
+    @include rem(height, 56px);
+    @include rem(margin-right, 12px);
+    @include rem(border-radius, 4px);
+  }
+
+  &__title {
+    margin: 0;
+    @include rem(font-size, 14px);
+    font-weight: 400;
+    color: $white;
+  }
+
+  &__button {
+    @include rem(font-size, 12px);
+    font-weight: 300;
+    color: $color-balanced-medium;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__exit {
+    @include rem(font-size, 24px);
+    color: $white;
+    opacity: 0;
+    transition: .4s all ease;
+  }
+}
