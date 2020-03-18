@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-content">
     <div class="sidebar-content__menu">
-      <button @click="openMenu()" class="button" type="submit">
+      <button @click="openMenu" class="button" type="submit">
         <i class="uil uil-apps"></i>
       </button>
     </div>
@@ -38,6 +38,8 @@
 </template>
 
 <script>
+import { EventBus } from '../../services/EventBus';
+
 export default {
   data() {
     return {
@@ -48,7 +50,7 @@ export default {
   },
   methods: {
     openMenu() {
-      this.$emit("open-menu", true);
+      EventBus.$emit('sidebar-menu', true);
     }
   }
 };
