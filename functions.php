@@ -1,6 +1,5 @@
 <?php
 
-
 // Tools
 include('includes/functions/tools.php');
 
