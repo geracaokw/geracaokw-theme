@@ -1,7 +1,7 @@
 <template>
   <aside class="sidebar" role="complementary">
-    <Content v-if="content"></Content>
-    <Menu v-if="menu"></Menu>
+    <Content v-if="content" @open-menu="openMenu"></Content>
+    <Menu :show="show"></Menu>
   </aside>
 </template>
 
@@ -11,7 +11,17 @@ import Menu from "./sidebar/SidebarMenu";
 import Button from "./buttons/Button";
 
 export default {
-  props: ["content", "menu"],
+  data() {
+    return {
+      show: false
+    };
+  },
+  props: ["content"],
+  methods: {
+    openMenu(e) {
+      this.show = e;
+    }
+  },
   components: {
     Content,
     Menu,

@@ -1,8 +1,10 @@
 .sidebar {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
+  height: 100%;
+  z-index: 1;
 
   &-content {
     height: 100%;
@@ -26,7 +28,7 @@
         }
 
         &:active {
-          color: $color-balanced-dark;
+          color: $color-balanced-darker;
         }
       }
     }
@@ -75,6 +77,64 @@
           @include rem(margin-bottom, 40px);
         }
       }
+    }
+  }
+
+  &-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+
+    &.is-open {
+      pointer-events: all;
+
+      .sidebar-menu__content {
+        transform: translateX(0);
+      }
+
+      .sidebar-menu__blur,
+      .sidebar-menu__close {
+        opacity: 1;
+      }
+    }
+
+    &__blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: $index-menu-bg;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-balanced-darker, .8);
+      opacity: 0;
+      transition: .5s opacity ease;
+    }
+
+    &__close {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(-56px, 24px);
+      color: $white;
+      @include rem(font-size, 40px);
+      opacity: 0;
+      transition: .5s opacity ease;
+    }
+
+    &__content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color: $color-balanced-medium;
+      @include rem(padding, 24px);
+      z-index: $index-menu;
+      transform: translateX(100%);
+      transition: .5s transform ease;
     }
   }
 }

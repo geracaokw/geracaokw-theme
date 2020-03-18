@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-content">
     <div class="sidebar-content__menu">
-      <button class="button" type="submit">
+      <button @click="openMenu()" class="button" type="submit">
         <i class="uil uil-apps"></i>
       </button>
     </div>
@@ -45,6 +45,11 @@ export default {
         ? window.localStorage.cartValue
         : false
     };
+  },
+  methods: {
+    openMenu() {
+      this.$emit("open-menu", true);
+    }
   }
 };
 </script>
