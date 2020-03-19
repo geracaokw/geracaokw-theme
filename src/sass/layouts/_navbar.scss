@@ -79,10 +79,14 @@
       @include rem(right, 24px);
       transform: translateY(-50%);
       @include rem(font-size, 32px);
-      color: $color-balanced-medium;
+      color: $color-stable-light;
       transition: $transition-buttons;
 
       &:hover {
+        color: $color-balanced-medium;
+      }
+
+      &:active {
         color: $color-balanced-darker;
       }
 

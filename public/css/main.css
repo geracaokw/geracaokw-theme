@@ -1663,11 +1663,13 @@ body {
       /* 9 */
       font-size: 3.2rem;
       /* 9 */
-      color: #9E88FD;
+      color: #A4A4A4;
       -webkit-transition: 0.2s all ease;
       -o-transition: 0.2s all ease;
       transition: 0.2s all ease; }
       .navbar-search__button:hover {
+        color: #9E88FD; }
+      .navbar-search__button:active {
         color: #5A4F89; }
       @media (min-width: 768px) {
         .navbar-search__button {
