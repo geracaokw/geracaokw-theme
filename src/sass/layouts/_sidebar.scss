@@ -37,7 +37,6 @@
     }
 
     &__menu,
-    &__cart,
     &__social {
 
       .button {
@@ -63,29 +62,8 @@
       }
     }
 
-    &__cart {
-      position: relative;
+    .cart-quantity {
       flex: 1;
-
-      &-number {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include rem(width, 24px);
-        @include rem(height, 24px);
-        @include rem(font-size, 12px);
-        border-radius: 50%;
-        box-shadow: 0 0 0 2px $white;
-        background-color: $color-balanced-medium;
-        color: $white;
-      }
-
-      .button {
-        @include rem(font-size, 48px);
-      }
     }
 
     &__social {

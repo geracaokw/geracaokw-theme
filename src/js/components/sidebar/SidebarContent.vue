@@ -6,12 +6,7 @@
       </button>
     </div>
 
-    <div v-if="cartValue" class="sidebar-content__cart">
-      <button class="button" type="submit">
-        <span class="sidebar-content__cart-number">{{ cartValue }}</span>
-        <i class="uil uil-shopping-cart-alt"></i>
-      </button>
-    </div>
+    <CartQuantity></CartQuantity>
 
     <nav class="sidebar-content__social">
       <a
@@ -38,7 +33,8 @@
 </template>
 
 <script>
-import { EventBus } from '../../services/EventBus';
+import { EventBus } from "../../services/EventBus";
+import CartQuantity from "../cart/CartQuantity";
 
 export default {
   data() {
@@ -50,8 +46,11 @@ export default {
   },
   methods: {
     openMenu() {
-      EventBus.$emit('sidebar-menu', true);
+      EventBus.$emit("sidebar-menu", true);
     }
+  },
+  components: {
+    CartQuantity
   }
 };
 </script>

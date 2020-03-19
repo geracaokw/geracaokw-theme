@@ -1,5 +1,5 @@
 <template>
-  <div class="user-welcome">
+  <div v-if="user.name" class="user-welcome">
     <img
       src="https://avatars2.githubusercontent.com/u/3299130?s=80&u=5367cf12eab0bea63c9543e4101ec3afbc05f8b2&v=4"
       alt
@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       user: {
-        name: 'Kevin Oliveira'
+        name: "Kevin Oliveira"
       }
     };
   }

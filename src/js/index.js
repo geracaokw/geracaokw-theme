@@ -4,6 +4,11 @@ import Vue from 'vue'
 
 // Custom Components
 Vue.component(
+  "Navbar",
+  require("./components/Navbar.vue").default
+);
+
+Vue.component(
   "Sidebar",
   require("./components/Sidebar.vue").default
 );

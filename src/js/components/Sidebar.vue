@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import { EventBus } from '../services/EventBus';
-import Content from './sidebar/SidebarContent';
-import Menu from './sidebar/SidebarMenu';
-import Button from './buttons/Button';
+import { EventBus } from "../services/EventBus";
+import Content from "./sidebar/SidebarContent";
+import Menu from "./sidebar/SidebarMenu";
+import Button from "./buttons/Button";
 
 export default {
   data() {
@@ -17,9 +17,9 @@ export default {
       show: false
     };
   },
-  props: ['content'],
+  props: ["content"],
   mounted() {
-    EventBus.$on('sidebar-menu', value => {
+    EventBus.$on("sidebar-menu", value => {
       this.show = value;
     });
   },

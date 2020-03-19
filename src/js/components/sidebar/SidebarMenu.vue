@@ -36,21 +36,21 @@
         ></List>
       </div>
 
-      <user-welcome></user-welcome>
+      <UserWelcome></UserWelcome>
     </div>
   </nav>
 </template>
 
 <script>
-import { EventBus } from '../../services/EventBus';
-import List from '../lists/ListSidebar';
-import UserWelcome from '../User/UserWelcome';
+import { EventBus } from "../../services/EventBus";
+import List from "../lists/ListSidebar";
+import UserWelcome from "../user/UserWelcome";
 
 export default {
-  props: ['show'],
+  props: ["show"],
   methods: {
     closeMenu() {
-      EventBus.$emit('sidebar-menu', false);
+      EventBus.$emit("sidebar-menu", false);
     }
   },
   components: {

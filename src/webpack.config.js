@@ -8,7 +8,8 @@ module.exports = {
   entry: [
     './js/',
     './sass/main.scss',
-    './sass/home.scss'
+    './sass/page.scss',
+    './sass/home.scss',
   ],
   output: {
     path: path.resolve(__dirname, '../public/js'),
