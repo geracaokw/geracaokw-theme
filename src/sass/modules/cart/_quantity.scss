@@ -1,6 +1,6 @@
 .cart-quantity {
   position: relative;
-  @include rem(font-size, 40px);
+  @include rem(font-size, 32px);
   color: $color-stable-light;
   transition: $transition-buttons;
 
@@ -10,6 +10,10 @@
 
   &:active {
     color: $color-balanced-darker;
+  }
+
+  @media (min-width: $desktop) {
+    @include rem(font-size, 40px);
   }
 
   &__number {

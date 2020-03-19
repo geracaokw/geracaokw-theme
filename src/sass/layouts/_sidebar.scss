@@ -58,7 +58,11 @@
       }
 
       .button {
-        @include rem(font-size, 40px);
+        @include rem(font-size, 32px);
+
+        @media (min-width: $desktop) {
+          @include rem(font-size, 40px);
+        }
       }
     }
 
