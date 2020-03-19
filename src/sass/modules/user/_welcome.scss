@@ -19,17 +19,26 @@
 
   &__img {
     display: block;
-    @include rem(width, 56px);
-    @include rem(height, 56px);
+    @include rem(width, 40px);
+    @include rem(height, 40px);
     @include rem(margin-right, 12px);
     @include rem(border-radius, 4px);
+
+    @media (min-width: $desktop) {
+      @include rem(width, 56px);
+      @include rem(height, 56px);
+    }
   }
 
   &__title {
     margin: 0;
-    @include rem(font-size, 14px);
+    @include rem(font-size, 12px);
     font-weight: 400;
     color: $white;
+
+    @media (min-width: $desktop) {
+      @include rem(font-size, 14px);
+    }
   }
 
   &__button {
@@ -43,9 +52,13 @@
   }
 
   &__exit {
-    @include rem(font-size, 24px);
+    @include rem(font-size, 16px);
     color: $white;
     opacity: 0;
     transition: .4s all ease;
+
+    @media (min-width: $desktop) {
+      @include rem(font-size, 24px);
+    }
   }
 }

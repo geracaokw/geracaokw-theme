@@ -16,8 +16,8 @@
 
   &-content {
     width: 100%;
-    @include rem(height, 96px);
-    @include rem(padding, 32px 24px);
+    @include rem(height, 72px);
+    @include rem(padding, 24px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,6 +28,7 @@
 
     @media (min-width: $desktop) {
       @include rem(width, 96px);
+      @include rem(padding, 32px 24px);
       height: 100%;
       flex-direction: column;
       margin-left: auto;
@@ -147,7 +148,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      transform: translate(-56px, -24px);
+      transform: translate(-56px, -12px);
       color: $white;
       @include rem(font-size, 40px);
       opacity: 0;
@@ -168,7 +169,7 @@
       flex-direction: column;
       @include rem(width, 240px);
       height: 100%;
-      @include rem(padding, 24px 0);
+      @include rem(padding, 16px 0);
       background-color: $color-balanced-darker;
       z-index: $index-menu;
       transform: translateX(100%);
@@ -176,6 +177,7 @@
 
       @media (min-width: $desktop) {
         @include rem(width, 320px);
+        @include rem(padding, 24px 0);
       }
     }
 
@@ -196,7 +198,7 @@
       padding: 0;
       text-decoration: none;
       list-style: none;
-      @include rem(padding, 24px);
+      @include rem(padding, 16px 24px);
 
       @media (min-width: $desktop) {
         @include rem(width, 320px);
@@ -244,7 +246,7 @@
         }
 
         &:not(:last-child) {
-          @include rem(margin-bottom, 14px);
+          @include rem(margin-bottom, 8px);
 
           @media (min-width: $desktop) {
             @include rem(margin-bottom, 16px);
