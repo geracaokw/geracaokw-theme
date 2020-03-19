@@ -237,10 +237,18 @@
       }
 
       li {
-        @include rem(font-size, 18px);
+        @include rem(font-size, 16px);
+
+        @media (min-width: $desktop) {
+          @include rem(font-size, 18px);
+        }
 
         &:not(:last-child) {
-          @include rem(margin-bottom, 16px);
+          @include rem(margin-bottom, 14px);
+
+          @media (min-width: $desktop) {
+            @include rem(margin-bottom, 16px);
+          }
         }
       }
     }
