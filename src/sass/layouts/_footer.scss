@@ -1,13 +1,25 @@
 .footer {
-  padding-bottom: rem(96px);
   background-color: $color-balanced-darker;
   color: $color-balanced-medium;
+
+  @media (min-width: $desktop) {
+    padding-bottom: rem(96px);
+  }
 
   &-section {
     @extend .grid;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: $desktop) {
+      flex-direction: row;
+    }
+
+    >* {
+      margin-bottom: rem(40px);
+    }
 
     &:last-child {
       padding-top: rem(40px);
@@ -19,6 +31,14 @@
   }
 
   &-copy {
+    width: 100%;
+    order: 3;
+
+    @media (min-width: $desktop) {
+      width: auto;
+      order: 1;
+    }
+
     &__logo {
       font-size: rem(64px);
       color: $color-balanced-medium;
@@ -32,6 +52,7 @@
   }
 
   &-menu {
+    order: 2;
     font-size: rem(14px);
 
     &__title {
@@ -68,12 +89,19 @@
   }
 
   &-social {
+    order: 1 !important;
+
+    @media (min-width: $desktop) {
+      order: 3 !important;
+    }
+
     ul {
       display: flex;
     }
 
     li {
       font-size: rem(24px);
+      margin-bottom: 0 !important;
 
       &:not(:last-child) {
         margin-right: rem(24px);
