@@ -1,0 +1,22 @@
+.grid {
+  width: $grid-mobile;
+  max-width: $grid-max;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $desktop-hd) {
+    width: $grid-desktop;
+  }
+}
+
+.col {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      width: 100%;
+
+      @media (min-width: $desktop) {
+        width: 100% / 12 * $i;
+      }
+    }
+  }
+}

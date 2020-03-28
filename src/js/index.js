@@ -33,4 +33,9 @@ Vue.component(
   require("./components/lists/ListCarousel.vue").default
 );
 
+Vue.component(
+  "FormNewsletter",
+  require("./components/forms/FormNewsletter.vue").default
+);
+
 const app = new Vue({}).$mount('[data-id="app"]')

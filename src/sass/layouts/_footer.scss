@@ -1,0 +1,83 @@
+.footer {
+  padding-bottom: rem(96px);
+  background-color: $color-balanced-darker;
+  color: $color-balanced-medium;
+
+  &-section {
+    @extend .grid;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &:last-child {
+      padding-top: rem(40px);
+    }
+
+    &:not(:last-child) {
+      padding-bottom: rem(40px);
+    }
+  }
+
+  &-copy {
+    &__logo {
+      font-size: rem(64px);
+      color: $color-balanced-medium;
+      text-decoration: none;
+    }
+
+    p {
+      font-size: rem(12px);
+      font-weight: 200;
+    }
+  }
+
+  &-menu {
+    font-size: rem(14px);
+
+    &__title {
+      margin: 0;
+      margin-bottom: rem(16px);
+      font-size: rem(16px);
+      font-weight: 400;
+      color: $white;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      font-weight: 200;
+
+      &:not(:last-child) {
+        margin-bottom: rem(16px);
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-balanced-medium;
+      transition: $transition-buttons;
+
+      &:hover {
+        color: $color-balanced-normal;
+      }
+    }
+  }
+
+  &-social {
+    ul {
+      display: flex;
+    }
+
+    li {
+      font-size: rem(24px);
+
+      &:not(:last-child) {
+        margin-right: rem(24px);
+      }
+    }
+  }
+}
