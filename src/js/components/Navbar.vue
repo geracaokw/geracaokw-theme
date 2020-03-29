@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar" role="banner">
+  <header :class="['navbar', { 'is-focus': searchFocus }]" role="banner">
     <a href="/" class="navbar-logo">
       <i class="icon-logo"></i>
     </a>
@@ -10,6 +10,8 @@
         name="s"
         placeholder="Buscar por produtos, eventos, formações e muito mais"
         type="text"
+        @focus="searchFocus = true"
+        @blur="searchFocus = false"
       />
       <button type="submit" class="navbar-search__button">
         <i class="uil uil-search"></i>
@@ -19,7 +21,11 @@
     <div class="navbar-buttons">
       <CartQuantity></CartQuantity>
 
-      <button @click="openMenu" class="button navbar-buttons__menu" type="submit">
+      <button
+        @click="openMenu"
+        class="button navbar-buttons__menu"
+        type="submit"
+      >
         <i class="uil uil-apps"></i>
       </button>
     </div>
@@ -36,7 +42,8 @@ import CartQuantity from "./cart/CartQuantity";
 export default {
   data() {
     return {
-      show: false
+      show: false,
+      searchFocus: false
     };
   },
   components: {

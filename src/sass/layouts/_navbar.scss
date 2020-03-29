@@ -17,6 +17,20 @@
     border-bottom: 1px solid $color-stable-lighter;
   }
 
+  &.is-focus {
+    @media (max-width: $desktop) {
+      .navbar-search {
+        position: absolute;
+        transform: translateY(-72px);
+        left: 0;
+        right: 0;
+        border-top: 1px solid $color-balanced-white;
+        border-left: 0;
+        border-right: 0;
+      }
+    }
+  }
+
   &-logo,
   &-buttons {
     @include rem(padding, 16px 24px);
@@ -38,24 +52,12 @@
   }
 
   &-search {
-    position: absolute;
-    transform: translateY(-72px);
-    left: 0;
-    right: 0;
+    position: relative;
     width: 100%;
     height: 100%;
-    border-top: 1px solid $color-balanced-white;
-    border-left: 0 solid $color-balanced-white;
-    border-right: 0 solid $color-balanced-white;
+    border-left: 1px solid $color-balanced-white;
+    border-right: 1px solid $color-balanced-white;
     transition: $transition-cards;
-
-    @media (min-width: $tablet) {
-      position: relative;
-      transform: translateY(0);
-      border-left: 1px solid $color-balanced-white;
-      border-right: 1px solid $color-balanced-white;
-      border-top: 0;
-    }
 
     &__input {
       @extend .reset-input;
@@ -87,6 +89,11 @@
       @include rem(font-size, 32px);
       color: $color-stable-light;
       transition: $transition-buttons;
+      pointer-events: none;
+
+      @media (min-width: $desktop) {
+        pointer-events: all;
+      }
 
       &:hover {
         color: $color-balanced-medium;
