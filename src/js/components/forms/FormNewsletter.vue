@@ -8,9 +8,19 @@
         e novidades por e-mail
       </h4>
 
-      <input-text id="name" label="Nome" v-model="name"></input-text>
-      <input-text id="email" label="E-mail" v-model="email"></input-text>
-      <Button type="submit" mode="filled" color="balanced">
+      <input-text
+        class="col-8"
+        id="name"
+        label="Nome"
+        v-model="name"
+      ></input-text>
+      <input-text
+        class="col-12"
+        id="email"
+        label="E-mail"
+        v-model="email"
+      ></input-text>
+      <Button :disabled="!email" type="submit" mode="filled" color="balanced">
         Quero receber
       </Button>
     </div>

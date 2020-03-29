@@ -28,6 +28,7 @@
     "webpack-cli": "^3.3.2"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
     "babel-core": "^6.26.3",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",

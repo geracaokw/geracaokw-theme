@@ -17,6 +17,7 @@
     </span>
   </a>
   <button
+    :disabled="disabled"
     :class="[
       'button',
       `button-${design ? design : 'square'}`,
@@ -37,7 +38,17 @@
 
 <script>
 export default {
-  props: ['link', 'type', 'icon', 'design', 'dir', 'color', 'mode', 'size']
+  props: [
+    "link",
+    "type",
+    "icon",
+    "disabled",
+    "design",
+    "dir",
+    "color",
+    "mode",
+    "size"
+  ]
 };
 </script>
 

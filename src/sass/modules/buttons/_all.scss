@@ -5,6 +5,10 @@
   align-items: center;
   justify-content: center;
 
+  &[disabled]:active {
+    @extend .shake;
+  }
+
   // Design
   &-square {
     @include rem(border-radius, 4px);

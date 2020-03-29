@@ -35,9 +35,6 @@ export default {
 <style lang="sass" scoped>
 @import '../../../../sass/base/imports'
 
-.form-control
-  width: 100%
-
 .form-control__wrap
   position: relative
 
@@ -48,9 +45,10 @@ export default {
   height: rem(48px)
   background-color: $white
   border-radius: rem(4px)
-  box-shadow: inset 0 0 0 1px $color-balanced-normal
+  border: rem(1px) solid $color-balanced-normal
   font-weight: 200
   color: $color-balanced-darker
+  transition: .2s all ease
 
   &:focus,
   &.has-content
@@ -59,8 +57,10 @@ export default {
     + .form-control__label
       top: 0
       transform: translateY(4px)
-      font-size: rem(12px)
-      color: $color-balanced-light
+      font-size: rem(11px)
+
+  &:focus
+    box-shadow: 0 rem(8px) rem(16px) rgba($color-balanced-black, .3), 0 0 0 rem(1px) $color-balanced-normal
 
 .form-control__label
   position: absolute
