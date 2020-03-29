@@ -548,3 +548,6 @@
       max-width: -webkit-calc(100% - 454px);
       max-width: calc(100% - 454px);
       margin-left: 20rem; } }
+
+.footer {
+  display: none; }

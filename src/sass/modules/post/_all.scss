@@ -1,0 +1,126 @@
+.post {
+  &-header {
+    margin-bottom: rem(40px);
+
+    @media (min-width: $desktop) {
+      margin-bottom: rem(80px);
+    }
+  }
+
+  &-cover {
+    position: relative;
+    margin: 0;
+
+    padding: rem(56px) 0;
+    background-color: $color-balanced-normal;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      padding: rem(136px) 0;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-caption {
+      @extend .grid;
+      color: $white;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: rem(40px);
+      font-weight: 400;
+
+      @media (min-width: $desktop) {
+        font-size: rem(64px);
+      }
+    }
+  }
+
+  &-content {
+    @extend .grid;
+    margin-bottom: rem(106px);
+    color: $color-balanced-darker;
+
+    @media (min-width: $desktop) {
+      margin-bottom: rem(96px);
+    }
+
+    p {
+      font-size: rem(16px);
+      font-weight: 200;
+      line-height: rem(24px);
+      color: $color-balanced-medium;
+
+      @media (min-width: $desktop) {
+        font-size: rem(24px);
+        line-height: rem(32px);
+      }
+    }
+
+    blockquote {
+      position: relative;
+      width: rem(308px);
+      margin: 0;
+      margin-left: rem(40px);
+      padding: 0;
+      font-family: 'titling-gothic-fb-compressed', sans-serif;
+      color: $color-balanced-medium;
+
+      @media (min-width: $desktop) {
+        margin-left: 0;
+      }
+
+      &:before {
+        content: '“';
+        position: absolute;
+        top: 0;
+        left: rem(-40px);
+        font-size: rem(100px);
+        line-height: rem(80px);
+        color: $color-balanced-light;
+
+        @media (min-width: $desktop) {
+          left: rem(-80px);
+          font-size: rem(200px);
+          line-height: rem(180px);
+        }
+      }
+
+      p {
+        font-size: rem(40px);
+        line-height: rem(40px);
+
+        @media (min-width: $desktop) {
+          font-size: rem(48px);
+          line-height: rem(48px);
+        }
+      }
+
+      p:after {
+        content: '”';
+      }
+    }
+  }
+
+  &-hero {
+    margin: rem(24px) 0;
+    font-family: 'titling-gothic-fb-compressed', sans-serif;
+    font-size: rem(56px);
+    line-height: rem(56px);
+
+    @media (min-width: $desktop) {
+      font-size: rem(72px);
+      line-height: rem(72px);
+    }
+  }
+}

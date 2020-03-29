@@ -102,6 +102,7 @@
     margin: 0;
     @include rem(margin-bottom, 4px);
     @include rem(font-size, 16px);
+    line-height: normal;
     font-family: $font-family;
     font-weight: 400;
     transition: .8s all ease;
