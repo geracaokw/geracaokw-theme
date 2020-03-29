@@ -1,8 +1,10 @@
 .footer {
+  display: none;
   background-color: $color-balanced-darker;
   color: $color-balanced-medium;
 
   @media (min-width: $desktop) {
+    display: block;
     padding-bottom: rem(96px);
   }
 
